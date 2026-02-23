@@ -1,1 +1,0 @@
-console.log("day1 Task loaded");
