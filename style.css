@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+h1,h2{
+ background-color: purple;
+ color:white;
+ padding:30px;
+ margin-top:15px;
+ margin-left: 40px;
+ margin-right: 50%;
+ border-radius: 5px;
+}
+
+
+h3{
+    background-color:whitesmoke;
+    color:black;
+    margin-top: 15px;
+    padding:30px;
+    margin-left: 40px;
+    margin-right: 50%;
+    border-radius: 5px;
+
+}
+
+
+footer{
+    background-color: purple;
+    color:white;
+    padding:30px;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 50%;
+    border-radius: 5px;
+}
