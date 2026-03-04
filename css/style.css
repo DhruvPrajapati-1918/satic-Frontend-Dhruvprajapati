@@ -431,3 +431,62 @@ body.no-scroll {
     font-size: 16px;
     cursor: pointer;
 }
+
+.contact-section{
+    height: 500px;
+    margin-left:40px;
+    margin-right: 40px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+#contactForm {
+    margin-top: 15px;
+}
+
+.form-group{
+     margin-bottom:20px;
+     display: flex;
+     flex-direction: column;
+     width:400px;
+    
+}
+
+.label{
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input,textarea{
+    padding: 10px;
+    border-radius: 6px;
+    border:2px solid #ccc;
+}
+
+
+input.error,
+textarea.error {
+    border-color: red;
+}
+
+
+input.success,
+textarea.success {
+    border-color: green;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary:hover{
+    color: none;
+}
+
