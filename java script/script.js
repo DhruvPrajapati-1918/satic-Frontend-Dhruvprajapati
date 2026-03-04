@@ -80,3 +80,79 @@ successBtn.addEventListener("click", () => {
 errorBtn.addEventListener("click", () => {
     createToast("error", "Failed to fetch data!");
 });
+
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+
+function validateName() {
+    const value = nameInput.value.trim();
+
+    if (value.length < 3) {
+        nameInput.classList.add("error");
+        nameInput.classList.remove("success");
+        nameError.textContent = "Name must be at least 3 characters long.";
+        return false;
+    } else {
+        nameInput.classList.remove("error");
+        nameInput.classList.add("success");
+        nameError.textContent = "";
+        return true;
+    }
+}
+
+function validateEmail() {
+    const value = emailInput.value.trim();
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!pattern.test(value)) {
+        emailInput.classList.add("error");
+        emailInput.classList.remove("success");
+        emailError.textContent = "Please enter a valid email.";
+        return false;
+    } else {
+        emailInput.classList.remove("error");
+        emailInput.classList.add("success");
+        emailError.textContent = "";
+        return true;
+    }
+}
+
+function validateMessage() {
+    const value = messageInput.value.trim();
+
+    if (value === "") {
+        messageInput.classList.add("error");
+        messageInput.classList.remove("success");
+        messageError.textContent = "Message cannot be empty.";
+        return false;
+    } else {
+        messageInput.classList.remove("error");
+        messageInput.classList.add("success");
+        messageError.textContent = "";
+        return true;
+    }
+}
+
+function checkFormValidity() {
+    const isValid =
+        validateName() &&
+        validateEmail() &&
+        validateMessage();
+
+    submitBtn.disabled = !isValid;
+}
+
+nameInput.addEventListener("input", checkFormValidity);
+emailInput.addEventListener("input", checkFormValidity);
+messageInput.addEventListener("input", checkFormValidity);
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Form Submitted Successfully!");
+});
