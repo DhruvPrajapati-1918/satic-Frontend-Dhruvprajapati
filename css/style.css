@@ -542,3 +542,32 @@ main{
 }
 
 }
+
+.back-to-top{
+    position:fixed;
+    bottom:40px;
+    right: 50px;
+    width:55px;
+    height:55px;
+    border-radius: 50%;
+    font-size:24px;
+    cursor: pointer;
+    background:#6a0dad;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition:opacity 0.3s ease;
+    z-index: 900;
+    pointer-events: none;
+}
+
+.back-to-top.show-btn{
+    opacity:1;
+    pointer-events: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
