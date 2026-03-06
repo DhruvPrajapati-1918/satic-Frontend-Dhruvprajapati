@@ -156,3 +156,23 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     alert("Form Submitted Successfully!");
 });
+
+
+
+const backtotopbtn =
+document.getElementById("backtotopbtn");
+
+window.addEventListener("scroll",function(){
+    if(this.window.scrollY > 500){
+        backtotopbtn.classList.add("show-btn");
+    }else{
+        backtotopbtn.classList.remove("show-btn")
+    }
+});
+
+backtotopbtn.addEventListener("click",function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+});
